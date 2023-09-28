@@ -30,7 +30,7 @@ function startGame() {
   initializeCards(cards);
 }
 
-//// Fazer cartas
+//// Fazer tabuleiro e cartas
 function initializeCards(cards) {
   let gameBoard = document.getElementById("gameBoard");
 
@@ -57,10 +57,10 @@ function createCardFace(face, card, element) {
   cardElementFace.classList.add(face);
 
   if (face === FRONT) {
-    let icontElement = document.createElement("img");
-    icontElement.classList.add(ICON);
-    icontElement.src = "../images/" + card.icon + ".png";
-    cardElementFace.appendChild(icontElement);
+    let iconElement = document.createElement("img");
+    iconElement.classList.add(ICON);
+    iconElement.src = "../images/" + card.icon + ".png";
+    cardElementFace.appendChild(iconElement);
   } else {
     cardElementFace.innerHTML = "&lt/&gt";
   }
